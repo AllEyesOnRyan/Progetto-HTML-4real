@@ -1,6 +1,6 @@
 /* ! Base Style */
 
-body{font-family: "Teko", sans-serif; font-size: 16px;}
+body{font-family: "Inter", sans-serif; font-size: 16px;}
 
 a{text-decoration: none;}
 
@@ -8,11 +8,12 @@ h1, h2, h3, h4, h5, p{color: #000; padding-bottom: 30px;}
 
 p{line-height: 28px; color: #666; font-weight: 300;}
 
-
+.menu-text{font-family: "Teko", sans-serif; font-size: 16px;}
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
 .normal-text{font-size: 20px;}
 .small-text{font-size: 14px;}
+
 
 /* sto dicendo che voglio un testo completamente in maiuscolo, alto 20px e bold */
 .intro-text{text-transform: uppercase; font-size: 20px; font-weight: bold;}
@@ -20,4 +21,73 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 @media (max-width: 768px) {
   .big-text{font-size: 40px; font-weight: 900;}
+}
+
+
+.menu li{display: inline-block;}
+.menu li a{color: grey; padding: 15px;}
+.logo{
+  z-index: 0;
+  height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ! Helpers */
+/* classe che viene utilizzata come jolly in varie parti del design che ti da un attributo semplice */
+
+.mt-1{margin-top: 50px;}
+.mt-2{margin-top: 100px;}
+.mt-3{margin-top: 150px;}
+.tw{color:#fff}
+
+
+
+/* Va a resettare il padding degli elementi applicando il padding degli elementi all'interno degli elementi
+e non all'esterno, per evitare sovrapposizioni */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
