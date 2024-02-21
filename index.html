@@ -14,19 +14,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/f845acb18bd09864e4d77d93cedc1261?family=TT+Lakes+Regular" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
     
     <div class="header">
-        <div class="logo">
+        <div class="logo-menu">
             <img src="apex-white-nav-logo.svg" alt="">
         </div>
-    
+        
         <!-- .menu>li*3 -->
         <ul class="menu">
-            <a href=""> <li class="menu-text"> Gioco <img src="white-down-arrow.png" alt=""> </li>  </a>
+            <a href=""> <li class="menu-text"> Gioco <img src="white-down-arrow.png" alt=""> </li></a>
             <a href=""> <li class="menu-text"> Novità <img src="white-down-arrow.png" alt=""> </li>  </a>
             <a href=""> <li class="menu-text"> Battlepass <img src="white-down-arrow.png" alt=""> </li>  </a>
             <a href=""> <li class="menu-text"> Stagione <img src="white-down-arrow.png" alt=""> </li>  </a>
@@ -36,7 +37,7 @@
 
         <!-- Call to action -->
         <div class="cta">
-            <a href="" class="button"> Contatti</a>
+            <a href="" class="button"> Contatti </a>
         </div>
     
         <div class="hamburger">
@@ -44,8 +45,34 @@
             <span></span>
             <span></span>
         </div>
-    
     </div>
+
+    <main class="container">
+        <div class="cover">
+            <div class="cover__background">
+                <div class="cover__logo">
+                    <img  src="apex-hero-medium-logo-light.svg" alt="">
+                </div>
+
+            </div>
+
+            <div class="cover__content">
+                <h2 class="sublogo-text tw"> Lanciati nella mischia!</h2>
+            </div>
+            
+            <video width="320" height="240" autoplay muted loop class="video-class">
+                <source src="Apex Legends_ Breakout Launch Trailer.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <div class="sl-1">
+            <img src="sl-1.jpg" alt="">
+        </div>
+
+    </main>
+    
+
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     
@@ -53,7 +80,7 @@
         $( document ).ready(function(){
             /*Variabili*/
 
-            var nav = $(".menu-container");
+            var nav = $(".menu");
             var pos = 0;
             var wid = "";
             var line = $(".line-menu");
