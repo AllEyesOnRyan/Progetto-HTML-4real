@@ -21,17 +21,16 @@
     
     <div class="header">
         <div class="logo">
-            <img src="apexlogo.png" alt="">
+            <img src="apex-white-nav-logo.svg" alt="">
         </div>
     
         <!-- .menu>li*3 -->
         <ul class="menu">
-            <li class="menu-text tw"><a href=""> Gioco </a></li>
-            <li class="menu-text tw"><a href=""> Novità</a></li>
-            <li class="menu-text tw"><a href=""> Battlepass</a></li>
-            <li class="menu-text tw"><a href=""> Stagione </a></li>
-            <li class="menu-text tw"><a href=""> Community </a></li>
-
+            <a href=""> <li class="menu-text"> Gioco <img src="white-down-arrow.png" alt=""> </li>  </a>
+            <a href=""> <li class="menu-text"> Novità <img src="white-down-arrow.png" alt=""> </li>  </a>
+            <a href=""> <li class="menu-text"> Battlepass <img src="white-down-arrow.png" alt=""> </li>  </a>
+            <a href=""> <li class="menu-text"> Stagione <img src="white-down-arrow.png" alt=""> </li>  </a>
+            <a href=""> <li class="menu-text"> Community <img src="white-down-arrow.png" alt=""> </li>  </a>
 
         </ul>
 
@@ -47,6 +46,54 @@
         </div>
     
     </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    
+    <script type="text/javascript">
+        $( document ).ready(function(){
+            /*Variabili*/
+
+            var nav = $(".menu-container");
+            var pos = 0;
+            var wid = "";
+            var line = $(".line-menu");
+            var active = $(".active");
+
+            /*Click*/
+            // usando il find è molto più veloce, semplice ed efficiente
+            nav.find("ul li").on('click', function(){
+
+            // this io sto andando a pescare li sul quale io sto cliccando
+            // si riferisce sempre all'elemento con le parentesi graffe che lo contiene
+            //mi restituisce la posizione del mio elemento sul quale sto cliccando
+            // console.log($(this).position().left);
+            var this_nav = $(this);
+            // creo una nuova variabile perché so che il this si riferisce solo alle graffe in cui è contenuto
+
+            /*Animate*/
+            line.animate({
+                left: this_nav.position().left,
+                width: this_nav.width() + 40 //metto il +40 perché ho padding 20 a s e 20 a dx
+            });
+            
+
+            nav.find("ul li").removeClass("active");
+            
+            if(!this_nav.hasClass("active") ){
+                this_nav.addClass("active")
+            }
+
+            this_nav.parent().parent().toggleClass("bg-grey");
+            });
+
+            /* On load */
+            var active_width = active.width();
+
+            line.css({width: active_width + 40})
+
+            });
+
+    </script>
 
     
 </body>
