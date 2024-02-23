@@ -38,9 +38,9 @@
 
 /* character*/
 .character{
-    width: 40%;
+    width: 30%;
     float: left;
-    padding: 20px;
+    padding: 0 40px 0 40px;
 }
 
 .description{
@@ -48,8 +48,9 @@
     font-style: italic;
     font-size: 100%;
     color: white;
-    width: 50%;
+    width: 60%;
     float: left;
+    padding: 0 40px 0 140px;
 }
 
 .img{
@@ -59,12 +60,13 @@
     padding: 100px;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1100px){
     .img{
         width: 40%;
         object-fit: cover;
     }
     .description{
+        font-size: 90%;
         display: flex;
         justify-content: center;
         width: 100%;

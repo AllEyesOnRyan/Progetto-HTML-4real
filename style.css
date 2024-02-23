@@ -1,7 +1,4 @@
 /* ! Base Style */
-/* *{
-  box-sizing: border-box;
-} */
 
 body{font-family: "TT Lakes Regular", sans-serif; font-size: 16px;}
 a{text-decoration: none;}
@@ -12,6 +9,7 @@ a{text-decoration: none;}
 p{line-height: 28px; color: #666; font-weight: 300;}
 
 .menu-text{font-family: "Teko", sans-serif; font-size: 25px; text-transform: uppercase; color: lightgrey;}
+.menu-subtext{font-family: "TT Lakes Regular", sans-serif; font-size: 16px; color: lightgrey; font-weight: 0;}
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
 .sublogo-text{font-size: 25px;}
@@ -35,9 +33,6 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   background-color: #000;
   position: fixed; /*Posizionamento che mi lascia la cosa fissa dov'è anche dopo che scorro*/
   top: 0;
-  /* left: 50%; */
-  /* traslo del 50% della sua larghezza indietro */
-  /* transform: translateX(-50%); */
   padding: 20px 15px;
   display: flex;
 }
@@ -51,12 +46,9 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 }
 
 .logo-menu img{height: 55px;}
+.logo-menu a{height: 55px;}
 
 .menu{width: 100%; z-index: 0;padding: 0 10px;}
-/* .menu a{display: inline-block;}
-.menu a li{display: block; padding: 15px 8px;}
-.menu a img{height: 15px;} */
-
 .menu li{display: inline-block;}
 .menu li a{display: block; padding: 15px 8px; position: relative;}
 .menu a img{height: 15px;}
@@ -66,57 +58,56 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 /* ! Tendina */
 
-
 .tendina{
-  position: absolute;
-  /* top: 20px; */
-  /* transform: translateY(45px); */
-  /* margin-top: 50px; */
-  padding-top: 40px;
-  max-height: 0px; 
-
-  width: auto;
-  /* border: 1px solid red; */
-  display: grid;
-  overflow: hidden; 
-  /* nasconde le cose che vanno all'esterno del contenitore */
-  transition: all 0.4s ease-in-out;
-  
+  position: relative;
 }
 
-/* .menu a ul li{
-  display: none;
-} */
+.tendina-info{
+  position: absolute;
+  padding-top: 30px;
+  max-height: 0px; 
+  width: 144px;
+  /* padding: 30px 10px 0 10px; */
+  display: grid;
+  overflow: hidden;
+  /* nasconde le cose che vanno all'esterno del contenitore */
+  transition: all 0.4s ease-in-out;
+}
 
-.menu a:hover .tendina{
+
+.tendina a ul a{display: none;}
+
+.tendina:hover .tendina-info{
   max-height: 300px;
   transition: all 0.4s ease;
 }
 
-.menu a:hover ul li{
+.tendina:hover .freccetta{
+  transform: rotate(180deg);
+}
+
+.tendina-info a:hover ul a{
   height: 50px;
   display: block;
-  /* transition: all 0.4s ease-in-out; */
+  /* padding: 20px 1000px; */
 }
-.menu ul li{
-  padding: 10px 5px;
-  height: 0;
-  background-color: black;
+
+.tendina ul a{
+  padding: 10px 20px;
+  /* height: 0; */
   overflow: hidden;
   transition: all 0.4s ease-in-out;
+  background: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.8));
+  /* text-align: center; */
 }
-
-
-
-
-
 
 
 
 /* ! Cover */
 .cover{
+  border-top: 0;
   position: relative;
-  border-bottom: 10px; 
+  border-bottom: 0px; 
   overflow: hidden;
 }
 
@@ -129,19 +120,8 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   top: 50%;
   transform: translate(-50%, -50%);
   height: 30%;
-
-  /* align-items: center; */
 }
 
-/* Modo un po' sbagliato per mettere il velino nero */
-/* .cover__background{
-  z-index: 1;
-  position: absolute;
-  background: linear-gradient(180deg, rgba(0, 0, 0, .5) 100%, rgba(0,0,0,.5) 100%);
-  /* border: 1px solid red;
-  min-width: 100%;
-  min-height: 100%;
-}  */
 
 .cover:after{
   content: ' ';
@@ -149,18 +129,18 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   height: 100%;
   display: block;
   position: absolute;
-  top: 0; left: 0;
+  bottom: 0; left: 0;
   background: #000;
   opacity: .5;
 }
 
 .video-class{
   z-index: 0;
-  padding: 95px 0 0 0;
+  padding: 96px 0 0 0;
   min-width: 100%;
   height: auto;
   position: relative;
-  bottom: 0;
+  top: 0;
   left: 0;
 }
 
@@ -172,19 +152,10 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   transform: translate(-50%, -20%);
 }
 
-/* .sl-1 img{
+.sfondo img{
   width: 100%;
-} */
-
-/* .line-menu{
-  position: absolute;
-  bottom: 0; left: 0; height: 8px; width: 30px;
-  background: #000;
 }
 
-.active{color: red}
-
-.bg-grey{background: #eee;} */
 
 
 
