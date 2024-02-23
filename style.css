@@ -1,7 +1,11 @@
 /* ! Base Style */
+/* *{
+  box-sizing: border-box;
+} */
 
 body{font-family: "TT Lakes Regular", sans-serif; font-size: 16px;}
 a{text-decoration: none;}
+
 
 /* h1, h2, h3, h4, h5{color: #000; padding-bottom: 30px;} */
 
@@ -14,13 +18,15 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 .normal-text{font-size: 20px;}
 .small-text{font-size: 14px;}
 .intro-text{text-transform: uppercase; font-size: 20px; font-weight: bold;}
+.button-text{text-transform: uppercase; font-size: 20px;}
 
-
-.button{padding: 18px 28px; background-color: #da292a; color: #fff; display: inline-block; border-radius: 4px;}
+.button{width: 230px; padding: 18px 20px; background-color: #da292a; color: #fff; display: inline-block; border-radius: 4px; text-align: center;}
 
 @media (max-width: 768px) {
   .big-text{font-size: 40px; font-weight: 900;}
 }
+
+/* ! Header */
 
 .header{
   z-index: 10;
@@ -29,9 +35,9 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   background-color: #000;
   position: fixed; /*Posizionamento che mi lascia la cosa fissa dov'è anche dopo che scorro*/
   top: 0;
-  left: 50%;
+  /* left: 50%; */
   /* traslo del 50% della sua larghezza indietro */
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   padding: 20px 15px;
   display: flex;
 }
@@ -44,19 +50,70 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   padding: 0 20px 0 10px;
 }
 
-/* .logo__centrato-verticale {} */
-
-.logo img {height: 55px;}
+.logo-menu img{height: 55px;}
 
 .menu{width: 100%; z-index: 0;padding: 0 10px;}
-.menu a{display: inline-block;}
-.menu a li{display: block; padding: 15px 5px;}
+/* .menu a{display: inline-block;}
+.menu a li{display: block; padding: 15px 8px;}
+.menu a img{height: 15px;} */
+
+.menu li{display: inline-block;}
+.menu li a{display: block; padding: 15px 8px; position: relative;}
 .menu a img{height: 15px;}
 
 .hamburger{display: none;}
 
 
+/* ! Tendina */
 
+
+.tendina{
+  position: absolute;
+  /* top: 20px; */
+  /* transform: translateY(45px); */
+  /* margin-top: 50px; */
+  padding-top: 40px;
+  max-height: 0px; 
+
+  width: auto;
+  /* border: 1px solid red; */
+  display: grid;
+  overflow: hidden; 
+  /* nasconde le cose che vanno all'esterno del contenitore */
+  transition: all 0.4s ease-in-out;
+  
+}
+
+/* .menu a ul li{
+  display: none;
+} */
+
+.menu a:hover .tendina{
+  max-height: 300px;
+  transition: all 0.4s ease;
+}
+
+.menu a:hover ul li{
+  height: 50px;
+  display: block;
+  /* transition: all 0.4s ease-in-out; */
+}
+.menu ul li{
+  padding: 10px 5px;
+  height: 0;
+  background-color: black;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+
+
+
+
+
+
+
+/* ! Cover */
 .cover{
   position: relative;
   border-bottom: 10px; 

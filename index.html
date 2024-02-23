@@ -22,22 +22,36 @@
     
     <div class="header">
         <div class="logo-menu">
-            <img src="Logos/apex-white-nav-logo.svg" alt="">
+            <a href="index.html"> <img src="Logos/apex-white-nav-logo.svg" alt=""> </a>
         </div>
         
         <!-- .menu>li*3 -->
         <ul class="menu">
-            <a href=""> <li class="menu-text"> Gioco <img src="Icons/white-down-arrow.png" alt=""> </li></a>
-            <a href=""> <li class="menu-text"> Novità <img src="Icons/white-down-arrow.png" alt=""> </li>  </a>
-            <a href=""> <li class="menu-text"> Battlepass <img src="Icons/white-down-arrow.png" alt=""> </li>  </a>
-            <a href=""> <li class="menu-text"> Stagione <img src="Icons/white-down-arrow.png" alt=""> </li>  </a>
-            <a href=""> <li class="menu-text"> Community <img src="Icons/white-down-arrow.png" alt=""> </li>  </a>
+            <li> <a href=""  class="menu-text"> Gioco <img src="Icons/white-down-arrow.png" alt="">
+                <ul class="tendina">
+                    <li>Ginger</li>
+                    <li>Cocacola</li>
+                    <li>Pepsi</li>
 
+                </ul>
+            </a> </li>
+
+            <li> <a href=""  class="menu-text"> Novità <img src="Icons/white-down-arrow.png" alt=""> </a> </li>
+            <li> <a href="" class="menu-text"> Battlepass </a> </li>
+            <li> <a href=""  class="menu-text"> Stagione <img src="Icons/white-down-arrow.png" alt=""> </a> </li>
+            <li> <a href=""  class="menu-text"> Community <img src="Icons/white-down-arrow.png" alt=""> </a> </li>
+            
+                <!-- <a href=""> <li class="menu-text"> Gioco <img src="Icons/white-down-arrow.png" alt=""> </li>
+            <a href=""> <li class="menu-text"> Novità <img src="Icons/white-down-arrow.png" alt=""> </li>  </a>
+            <a href=""> <li class="menu-text"> Battlepass </li>  </a>
+            <a href=""> <li class="menu-text"> Stagione <img src="Icons/white-down-arrow.png" alt=""> </li>  </a>
+            <a href=""> <li class="menu-text"> Community <img src="Icons/white-down-arrow.png" alt=""> </li>  </a> -->
         </ul>
 
+        
         <!-- Call to action -->
         <div class="cta">
-            <a href="" class="button"> Contatti </a>
+            <a href="" class="button button-text"> Scarica gratis </a>
         </div>
     
         <div class="hamburger">
@@ -53,7 +67,6 @@
                 <div class="cover__logo">
                     <img  src="Logos/apex-hero-medium-logo-light.svg" alt="">
                 </div>
-
             </div>
 
             <div class="cover__content">
@@ -63,7 +76,6 @@
             <video width="320" height="240" autoplay muted loop class="video-class">
                 <source src="Logos/Apex Legends_ Breakout Launch Trailer.mp4" type="video/mp4">
             </video>
-
         </div>
 
         <div class="sl-1">
@@ -74,54 +86,38 @@
     
 
 
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    
-    <script type="text/javascript">
-        $( document ).ready(function(){
-            /*Variabili*/
+    <footer>
+        
+    </footer>
 
-            var nav = $(".menu");
-            var pos = 0;
-            var wid = "";
-            var line = $(".line-menu");
-            var active = $(".active");
+    <!-- Try per provare ad usare jquery per la tendina -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 
-            /*Click*/
-            // usando il find è molto più veloce, semplice ed efficiente
-            nav.find("ul li").on('click', function(){
+    <!-- <script type="text/javascript">
 
-            // this io sto andando a pescare li sul quale io sto cliccando
-            // si riferisce sempre all'elemento con le parentesi graffe che lo contiene
-            //mi restituisce la posizione del mio elemento sul quale sto cliccando
-            // console.log($(this).position().left);
-            var this_nav = $(this);
-            // creo una nuova variabile perché so che il this si riferisce solo alle graffe in cui è contenuto
+      //Metodo per fare una tendina che si apre o chiude quando ci clicchi su
+        $( document ).ready(function() {
+        // selettore jquery
+        $(".tendina").addClass("tendina--hide")
 
-            /*Animate*/
-            line.animate({
-                left: this_nav.position().left,
-                width: this_nav.width() + 40 //metto il +40 perché ho padding 20 a s e 20 a dx
-            });
-            
+        /*Click*/
+        $(".tendina").on('click', function() {
+          // selettore this. Con questo elemento io posso andare a pescare l'elemento sul quale ho cliccato
+            console.log($(this));
 
-            nav.find("ul li").removeClass("active");
-            
-            if(!this_nav.hasClass("active") ){
-                this_nav.addClass("active")
-            }
+          // toggleClass aggiunge o toglie una classe quando ci clicco sopra
+            $(this).find(".item_content").toggleClass("item_content--open" );
 
-            this_nav.parent().parent().toggleClass("bg-grey");
-            });
+        });
 
-            /* On load */
-            var active_width = active.width();
+        /*Open Panel*/
+        $(".menu-icon").on('click', function(){
+            $(".menu-panel").toggleClass("menu-panel--open");
+        });
 
-            line.css({width: active_width + 40})
+    });
 
-            });
+    </script> -->
 
-    </script>
-
-    
 </body>
 </html>
