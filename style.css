@@ -9,6 +9,7 @@ a{text-decoration: none;}
 p{line-height: 28px; color: #666; font-weight: 300;}
 
 .menu-text{font-family: "Teko", sans-serif; font-size: 25px; text-transform: uppercase; color: lightgrey;}
+.menu-subtext{font-family: "TT Lakes Regular", sans-serif; font-size: 16px; color: lightgrey; font-weight: 0;}
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
 .sublogo-text{font-size: 25px;}
@@ -57,36 +58,47 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 /* ! Tendina */
 
-
 .tendina{
+  position: relative;
+}
+
+.tendina-info{
   position: absolute;
-  padding-top: 40px;
+  padding-top: 30px;
   max-height: 0px; 
-  width: 200px;
+  width: 144px;
+  /* padding: 30px 10px 0 10px; */
   display: grid;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* nasconde le cose che vanno all'esterno del contenitore */
   transition: all 0.4s ease-in-out;
 }
 
-.menu a ul li{display: none;} 
-.menu a:hover .tendina{
+
+.tendina a ul a{display: none;}
+
+.tendina:hover .tendina-info{
   max-height: 300px;
   transition: all 0.4s ease;
 }
 
-.menu a:hover ul li{
-  height: 50px;
-  display: block;
-  padding: 20px 50px;
+.tendina:hover .freccetta{
+  transform: rotate(180deg);
 }
 
-.menu ul li{
-  padding: 10px 5px;
-  height: 0;
+.tendina-info a:hover ul a{
+  height: 50px;
+  display: block;
+  /* padding: 20px 1000px; */
+}
+
+.tendina ul a{
+  padding: 10px 20px;
+  /* height: 0; */
   overflow: hidden;
   transition: all 0.4s ease-in-out;
   background: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.8));
+  /* text-align: center; */
 }
 
 
@@ -143,9 +155,6 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 .sfondo img{
   width: 100%;
 }
-
-
-
 
 
 
