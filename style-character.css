@@ -21,13 +21,16 @@
     width: 100%;
     height: auto;
     left: 50%;
-    mask-image: linear-gradient(rgb(0, 0, 0) 65%, rgba(0, 0, 0, 0) 98%);
+    mask-image: linear-gradient(rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 98%);
+    border: 1px solid red;
+    margin-bottom: 20px;
 }
 
-.main_name{font-family: "Protest Revolution", sans-serif; 
+.main_name{
+    font-family: "Protest Revolution", sans-serif; 
     font-weight: 400; 
     font-style: normal;
-    position: absolute; 
+    position: absolute;
     width: 100%;
     height: auto;
     top: 70%;
@@ -35,4 +38,22 @@
     font-size: 70px;
     transform: translateX(-50%);
     text-align: center;
+}
+
+.info{
+    margin-top: 20px;
+}
+
+.img{
+    width: 40%;
+    float: left;
+    padding: 20px;
+}
+
+.description{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+    width: 60%;
+    float: right;
 }
