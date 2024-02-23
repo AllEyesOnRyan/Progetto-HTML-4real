@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Apex Legends</title>
 
     <!-- Sta roba serve per resettare tutte le proprietà css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="style.css"> <!-- Adesso sto creando un link che fa collegare index allo style-->
+    <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
     
     <div class="header">
@@ -27,25 +28,22 @@
         
         <!-- .menu>li*3 -->
         <ul class="menu">
-            <li> <a href=""  class="menu-text"> Gioco <img src="Icons/white-down-arrow.png" alt="">
-                <ul class="tendina">
-                    <li>Ginger</li>
-                    <li>Cocacola</li>
-                    <li>Pepsi</li>
-
-                </ul>
-            </a> </li>
-
+            <li>
+                <a href=""  class="menu-text"> Informazioni <img src="Icons/white-down-arrow.png" alt="">
+                    <ul class="tendina">
+                        <!-- <h4>Panoramica</h4> -->
+                        <li>Apex Legends</li>
+                        <li></li>
+                        <li></li>
+                        <!-- <a href="leggende.html">Leggende</a>
+                        <a href="maps.html">Mappe</a> -->
+                    </ul>
+                </a>
+            </li>
             <li> <a href=""  class="menu-text"> Novità <img src="Icons/white-down-arrow.png" alt=""> </a> </li>
             <li> <a href="" class="menu-text"> Battlepass </a> </li>
             <li> <a href=""  class="menu-text"> Stagione <img src="Icons/white-down-arrow.png" alt=""> </a> </li>
             <li> <a href=""  class="menu-text"> Community <img src="Icons/white-down-arrow.png" alt=""> </a> </li>
-            
-                <!-- <a href=""> <li class="menu-text"> Gioco <img src="Icons/white-down-arrow.png" alt=""> </li>
-            <a href=""> <li class="menu-text"> Novità <img src="Icons/white-down-arrow.png" alt=""> </li>  </a>
-            <a href=""> <li class="menu-text"> Battlepass </li>  </a>
-            <a href=""> <li class="menu-text"> Stagione <img src="Icons/white-down-arrow.png" alt=""> </li>  </a>
-            <a href=""> <li class="menu-text"> Community <img src="Icons/white-down-arrow.png" alt=""> </li>  </a> -->
         </ul>
 
         
@@ -78,8 +76,8 @@
             </video>
         </div>
 
-        <div class="sl-1">
-            <img src="" alt="">
+        <div class="sfondo">
+            <img src="Foto main/sfondo s19.jpeg" alt="">
         </div>
 
     </main>
@@ -89,35 +87,6 @@
     <footer>
         
     </footer>
-
-    <!-- Try per provare ad usare jquery per la tendina -->
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
-
-    <!-- <script type="text/javascript">
-
-      //Metodo per fare una tendina che si apre o chiude quando ci clicchi su
-        $( document ).ready(function() {
-        // selettore jquery
-        $(".tendina").addClass("tendina--hide")
-
-        /*Click*/
-        $(".tendina").on('click', function() {
-          // selettore this. Con questo elemento io posso andare a pescare l'elemento sul quale ho cliccato
-            console.log($(this));
-
-          // toggleClass aggiunge o toglie una classe quando ci clicco sopra
-            $(this).find(".item_content").toggleClass("item_content--open" );
-
-        });
-
-        /*Open Panel*/
-        $(".menu-icon").on('click', function(){
-            $(".menu-panel").toggleClass("menu-panel--open");
-        });
-
-    });
-
-    </script> -->
 
 </body>
 </html>
