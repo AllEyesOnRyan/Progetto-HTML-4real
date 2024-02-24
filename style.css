@@ -64,7 +64,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 .tendina-info{
   position: absolute;
-  padding-top: 30px;
+  padding-top: 20px;
   max-height: 0px; 
   width: 144px;
   /* padding: 30px 10px 0 10px; */
@@ -72,6 +72,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   overflow: hidden;
   /* nasconde le cose che vanno all'esterno del contenitore */
   transition: all 0.4s ease-in-out;
+  border-radius: 7px;
 }
 
 
@@ -97,7 +98,9 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   /* height: 0; */
   overflow: hidden;
   transition: all 0.4s ease-in-out;
-  background: linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,0.8));
+  background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,0.9));
+  
+
   /* text-align: center; */
 }
 
