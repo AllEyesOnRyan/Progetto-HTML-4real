@@ -86,6 +86,10 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   
 }
 
+.tendina a:hover{
+  color: #da292a;
+}
+
 .tendina:hover .freccetta{
   transform: rotate(180deg);
 }
@@ -94,6 +98,10 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   height: 50px;
   display: block;
   /* padding: 20px 1000px; */
+}
+
+.tendina-info a:hover{
+  color: #da292a;
 }
 
 .tendina ul a{

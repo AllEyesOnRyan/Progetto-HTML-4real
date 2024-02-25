@@ -26,6 +26,7 @@ a{text-decoration: none;}
 .main_name{
     font-family: "Protest Revolution", sans-serif; 
     font-style: italic;
+    /* text-transform: uppercase; */
     font-size: 14vw;
     position: absolute;
     text-align: center;
