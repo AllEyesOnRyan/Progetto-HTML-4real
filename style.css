@@ -83,6 +83,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 .tendina:hover .tendina-info{
   max-height: 300px;
   transition: all 0.4s ease;
+  
 }
 
 .tendina:hover .freccetta{
