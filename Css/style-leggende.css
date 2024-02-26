@@ -41,12 +41,12 @@ a{text-decoration: none;}
 }
 
 
-.legends-background img{
+/* .legends-background img{
   width: 100%;
   z-index: 0;
-  position: relative;
   height: 100%;
-}
+  position: relative;
+} */
 
 .banners{
   position: absolute;
@@ -72,6 +72,28 @@ a{text-decoration: none;}
 .banner__copy h3{font-size: 2.2vw; color: #000; text-align: center; font-weight: 600; margin-top: 4px;}
 .banner__copy p{margin-top: 8px; font-size: 1.5vw;  color: gray; text-align: center;}
 
+.zoom-container {
+	width: 400px;
+	height: 222px;
+	position: relative;
+	overflow: hidden;
+}
+.zoom-container img {
+	top: 0;
+	left: 0;
+	width: 400px;
+	height: 222px;
+	opacity: 0.5;
+	transition: all 500ms ease-in;
+	position: absolute;	
+}
+.zoom-container img:hover {
+	top: 0px;
+	left: 0px;
+	opacity: 1;
+	width: 900px;	
+	height: 500px;
+}
 
 @media (max-width: 1100px) {
   .legends-background img{
