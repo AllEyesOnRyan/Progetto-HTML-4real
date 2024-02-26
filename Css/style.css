@@ -7,7 +7,7 @@ a{text-decoration: none;}
 
 p{line-height: 28px; color: #666; font-weight: 300;}
 
-.menu-text{font-family: "Teko", sans-serif; font-size: 25px; text-transform: uppercase; color: lightgrey;}
+.menu-text{font-family: "Teko", sans-serif; font-size: 25px; text-transform: uppercase; color: #fff;}
 .menu-subtext{font-family: "TT Lakes Regular", sans-serif; font-size: 16px; color: lightgrey; font-weight: 0;}
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
@@ -30,7 +30,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   z-index: 10;
   margin: 0;
   width: 100%;
-  background-color: #000;
+  background-color: #24262a;
   position: fixed; /*Posizionamento che mi lascia la cosa fissa dov'è anche dopo che scorro*/
   top: 0;
   padding: 20px 15px;

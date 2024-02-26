@@ -41,15 +41,18 @@ a{text-decoration: none;}
 }
 
 
-/* .legends-background img{
-  width: 100%;
-  z-index: 0;
-  height: 100%;
-  position: relative;
-} */
+.legends-background{
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg"); /* Aggiunge lo sfondo */
+  background-attachment: fixed; /* Lo rende fisso */
+  background-size: cover; /* Adatta lo sfondo alla finestra del browser */
+  min-height: 100vh; /* Impedisce che le card superino l'altezza della finestra */
+}
 
 .banners{
-  position: absolute;
   z-index: 3;
   /* border: 1px solid red; */
   margin: 40px;
@@ -58,93 +61,123 @@ a{text-decoration: none;}
 
 
 .banner{
-  /* border: 1px solid red; */
-  width: 23%;
+  width: 23.6%;
+  margin: 1% 0.7%;
   float: left;
-  margin: 1% 1%;
+  height: auto;
+  vertical-align: top;
+  /* border: 1px solid red; */
+  /* opacity: 1; */
+  background-color: #ffffff64;
+  transition: all 200ms ease-in;
+
 }
 
-.banner__img{
+
+/* .banner-in{
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  opacity: 0.9;
+  transition: all 200ms ease-in;
+} */
+
+.banner:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  opacity: 1.1;
+  background-color: rgb(225, 247, 255);
+}
+
+.banner img {
   width: 100%;
   height: auto;
 }
 
-.banner__copy h3{font-size: 2.2vw; color: #000; text-align: center; font-weight: 600; margin-top: 4px;}
-.banner__copy p{margin-top: 8px; font-size: 1.5vw;  color: gray; text-align: center;}
 
-.zoom-container {
-	width: 400px;
-	height: 222px;
-	position: relative;
-	overflow: hidden;
+/* .banner img{
+  width: 100%;
 }
-.zoom-container img {
-	top: 0;
-	left: 0;
-	width: 400px;
-	height: 222px;
-	opacity: 0.5;
-	transition: all 500ms ease-in;
-	position: absolute;	
-}
-.zoom-container img:hover {
-	top: 0px;
-	left: 0px;
+
+.banner-in:hover {
 	opacity: 1;
-	width: 900px;	
-	height: 500px;
-}
+	width: 120%;
+} */
+
+
+.banner__copy h3{font-size: 2.2vw; color: #000; text-align: center; font-weight: 600; margin-top: 4px;}
+.banner__copy p{margin-top: 8px; font-size: 1.5vw;  color: #000; text-align: center; padding-bottom: 10px;}
+
 
 @media (max-width: 1100px) {
-  .legends-background img{
-    width: 100%;
-    height: 100%;
+  .legends-background{
     z-index: 0;
-    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg"); /* Aggiunge lo sfondo */
+    background-attachment: fixed; /* Lo rende fisso */
+    background-size: cover; /* Adatta lo sfondo alla finestra del browser */
+    min-height: 100vh; /* Impedisce che le card superino l'altezza della finestra */
   }
 
   .banners{
     z-index: 3;
     margin: 20px;
-    position: absolute;
     /* overflow: hidden; */
-    width: auto;
-    height: auto;
   }
-  
   
   
   .banner{
     width: 48%;
     float: left;
-    margin: 0 1%;
+    margin: 1% 1%;
+    vertical-align: top;
+    /* border: 1px solid red; */
+    /* opacity: 1; */
+    background-color: #ffffff64;
+    transition: all 200ms ease-in;
   }
 
-  .banner__img{
+  .banner:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    opacity: 1.1;
+    background-color: rgb(225, 247, 255);
+  }
+  
+  .banner img {
     width: 100%;
     height: auto;
   }
   
+  
   .banner__copy h3{font-size: 6vw; color: #000; text-align: center; font-weight: 600; padding: 5px 0 5px 0;
   }
-  .banner__copy p{padding: 5px 0 5px 0;font-size: 3.5vw;  color: gray; text-align: center;}
+  .banner__copy p{padding: 5px 0 5px 0;font-size: 3.5vw;  color: black; text-align: center;}
   
 }
 
 
 @media (max-width: 768px) {
-  .legends-background img{
-    width: 100%;
-    z-index: 0;
-    position: relative;
+  .legends-background{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg"); /* Aggiunge lo sfondo */
+    background-attachment: fixed; /* Lo rende fisso */
+    background-size: cover; /* Adatta lo sfondo alla finestra del browser */
+    min-height: 100vh; /* Impedisce che le card superino l'altezza della finestra */
   }
 
   .banners{
     z-index: 3;
     /* border: 1px solid red; */
     margin: 20px;
-    width: auto;
-    height: auto;
+    /* width: auto;
+    height: auto; */
   }
   
   
@@ -153,15 +186,28 @@ a{text-decoration: none;}
     /* border: 1px solid red; */
     width: 98%;
     float: left;
-    margin: 0 1%;
+    margin: 4% 1%;
+    vertical-align: top;
+    /* border: 1px solid red; */
+    /* opacity: 1; */
+    background-color: #ffffff64;
+    transition: all 200ms ease-in;
   }
-
-  .banner__img{
+  
+  .banner:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    opacity: 1.1;
+    background-color: rgb(225, 247, 255);
+  }
+  
+  .banner img {
     width: 100%;
     height: auto;
   }
   
+  
   .banner__copy h3{font-size: 8vw; color: #000; text-align: center; font-weight: 600;}
-  .banner__copy p{margin-top: 8px; margin-bottom: 8px; font-size: 5.5vw;  color: gray; text-align: center;}
+  .banner__copy p{margin-top: 8px; margin-bottom: 8px; font-size: 5.5vw;  color: black; text-align: center;}
   
 }
