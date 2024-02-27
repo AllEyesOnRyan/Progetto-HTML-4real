@@ -88,7 +88,7 @@
 
 .brcard__container{width: 90%;}
 
-.brcard__container img{float: left; width: auto; height: 40%;}
+.brcard__container img{float: left; width: 50%; height: 40%;}
 
 .brcard__container2{
   position: absolute;
