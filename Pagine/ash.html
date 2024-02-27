@@ -56,6 +56,21 @@
     </div>
     
     <main>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function() {
+
+            $(".box").addClass("box--hide")
+            /*Open Panel*/
+            $(".hamburger").on('click', function(){
+                $(".menu-panel").toggleClass("menu-panel--open");
+            });
+
+        });
+        </script>
+
+
         <div class="cover1">
             <img src="../Foto/Character/Ash-w.png" alt="png" class="wp">
             <div class="main_name">
@@ -72,13 +87,57 @@
                 <br><br>Il suo cervello fu trasferito nell'involucro di un simulacro, ma l'operazione provocò una grave amnesia. Inoltre, il trauma della "morte" finì per scindere la sua personalità. Ash è la personificazione del lato freddo, perfezionista e assetato di potere della dott.ssa Reid. Ma dietro quell'apparenza forte e sicura di sé si cela qualcosa di inquietante. Quando Horizon riuscì ad accedere ai suoi codici di programmazione, la struttura che teneva in catene la fragile (ma non per questo meno intelligente) personalità sopita di Leigh iniziò a cedere. Ash si unisce agli Apex Games per dimostrare di aver trasceso la sua natura umana. Leigh, tuttavia, è determinata a dimostrare che si sbaglia.
             </p>
         </div>
-        <!-- Inserimento abilità sotto la descrizione + inserimento abilità nel mediaquery a fianco della foto tagliata -->
-
+        
         <div class="container-video">
             <iframe class="video" width="700" height="550" src="https://www.youtube.com/embed/1R559DWBYbU" frameborder="0" allowfullscreen></iframe>
         </div>
 
     </main>
+
+    <!-- Da copiare ovunque -->
+    <button id="torna-su" onclick="scrollToTop()"> <img src="../Foto/Icons/" alt=""></button>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("torna-su").style.display = "block";
+            } else {
+            document.getElementById("torna-su").style.display = "none";
+            }
+        }
+        
+        // Animazione a scorrimento
+        function scrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, c - c / 8);
+                }
+        };
+        scrollToTop();
+        }
+    
+    </script>
+    
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="col">
+                <h4 class="normal-text tw"> Chi siamo </h4>
+                <p class="tw"> Brambilla Federico e Crespi Ryan sono due informatici di alto livello famosi per il concepimento di siti obbrobriosi. Dopo 2 ore di esperienza sul campo hanno deciso di cimentarsi nella creazione del migliore sito dedicato ad Apex Legends annientando la poca dignità restante alla nota azienda videoludica EA entertainment.  </p>
+            </div>
+            
+            <div class="col">
+                <h4 class="normal-text tw"> Brambilla Federico</h4>
+                <p  class="tw"> Email commerciale: salve.prof@come.sta.com</p>
+
+                <h4 class="normal-text tw"> Crespi Ryan </h4>
+                <p  class="tw"> Email commerciale: laprego.cimetta@unvoto.alto.com</p>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>

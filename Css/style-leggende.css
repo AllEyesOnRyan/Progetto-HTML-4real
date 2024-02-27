@@ -2,6 +2,20 @@
 body{font-family: "TT Lakes Regular", sans-serif; font-size: 16px;}
 a{text-decoration: none;}
 
+.logo-text{
+  font-family: "Teko", sans-serif;
+  font-size: 6vw;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.logo-subtext{
+  font-size: 2vw;
+  text-align: center;
+  color: #fff;
+}
 
 /* ! Cover */
 .cover2{
@@ -18,9 +32,9 @@ a{text-decoration: none;}
   display: flex;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 30%;
   transform: translate(-50%, -50%);
-  height: 30%;
+  height: 40%;
 }
 
 
@@ -38,6 +52,15 @@ a{text-decoration: none;}
 .cover2__background img{
   width: 100%;
   height: auto;
+  display: block;
+}
+
+.cover2__content{
+  z-index: 2;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(-50%, -20%);
 }
 
 
@@ -46,19 +69,19 @@ a{text-decoration: none;}
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg"); /* Aggiunge lo sfondo */
-  background-attachment: fixed; /* Lo rende fisso */
-  background-size: cover; /* Adatta lo sfondo alla finestra del browser */
-  min-height: 100vh; /* Impedisce che le card superino l'altezza della finestra */
+  background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
 }
 
+.divisorio{background: #000; height: 50px; width: 100%; display: block;}
+
+/* ! Gestione Banners */
 .banners{
   z-index: 3;
-  /* border: 1px solid red; */
   margin: 40px;
 }
-
-
 
 .banner{
   width: 23.6%;
@@ -66,21 +89,10 @@ a{text-decoration: none;}
   float: left;
   height: auto;
   vertical-align: top;
-  /* border: 1px solid red; */
-  /* opacity: 1; */
   background-color: #ffffff64;
   transition: all 200ms ease-in;
 
 }
-
-
-/* .banner-in{
-  width: 100%;
-  height: auto;
-  vertical-align: top;
-  opacity: 0.9;
-  transition: all 200ms ease-in;
-} */
 
 .banner:hover {
   transform: scale(1.15);
@@ -89,53 +101,36 @@ a{text-decoration: none;}
   background-color: rgb(225, 247, 255);
 }
 
-.banner img {
-  width: 100%;
-  height: auto;
-}
-
-
-/* .banner img{
-  width: 100%;
-}
-
-.banner-in:hover {
-	opacity: 1;
-	width: 120%;
-} */
-
-
+.banner img {width: 100%; height: auto;}
 .banner__copy h3{font-size: 2.2vw; color: #000; text-align: center; font-weight: 600; margin-top: 4px;}
 .banner__copy p{margin-top: 8px; font-size: 1.5vw;  color: #000; text-align: center; padding-bottom: 10px;}
 
 
-@media (max-width: 1100px) {
+@media (min-width:768px) and (max-width: 1100px) {
   .legends-background{
     z-index: 0;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg"); /* Aggiunge lo sfondo */
-    background-attachment: fixed; /* Lo rende fisso */
-    background-size: cover; /* Adatta lo sfondo alla finestra del browser */
-    min-height: 100vh; /* Impedisce che le card superino l'altezza della finestra */
+    background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
   }
+
+  .divisorio{background: #000; height: 50px; width: 100%; display: block;}
 
   .banners{
     z-index: 3;
     margin: 20px;
-    /* overflow: hidden; */
   }
-  
   
   .banner{
     width: 48%;
     float: left;
     margin: 1% 1%;
     vertical-align: top;
-    /* border: 1px solid red; */
-    /* opacity: 1; */
     background-color: #ffffff64;
     transition: all 200ms ease-in;
   }
@@ -147,14 +142,8 @@ a{text-decoration: none;}
     background-color: rgb(225, 247, 255);
   }
   
-  .banner img {
-    width: 100%;
-    height: auto;
-  }
-  
-  
-  .banner__copy h3{font-size: 6vw; color: #000; text-align: center; font-weight: 600; padding: 5px 0 5px 0;
-  }
+  .banner img {width: 100%; height: auto;}
+  .banner__copy h3{font-size: 6vw; color: #000; text-align: center; font-weight: 600; padding: 5px 0 5px 0;}
   .banner__copy p{padding: 5px 0 5px 0;font-size: 3.5vw;  color: black; text-align: center;}
   
 }
@@ -166,30 +155,22 @@ a{text-decoration: none;}
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg"); /* Aggiunge lo sfondo */
-    background-attachment: fixed; /* Lo rende fisso */
-    background-size: cover; /* Adatta lo sfondo alla finestra del browser */
-    min-height: 100vh; /* Impedisce che le card superino l'altezza della finestra */
+    background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
   }
 
-  .banners{
-    z-index: 3;
-    /* border: 1px solid red; */
-    margin: 20px;
-    /* width: auto;
-    height: auto; */
-  }
-  
-  
-  
+  .divisorio{background: #000; height: 50px; width: 100%; display: block;}
+
+  .banners{z-index: 3; margin: 20px;}
+
   .banner{
     /* border: 1px solid red; */
     width: 98%;
     float: left;
     margin: 4% 1%;
     vertical-align: top;
-    /* border: 1px solid red; */
-    /* opacity: 1; */
     background-color: #ffffff64;
     transition: all 200ms ease-in;
   }
@@ -201,12 +182,7 @@ a{text-decoration: none;}
     background-color: rgb(225, 247, 255);
   }
   
-  .banner img {
-    width: 100%;
-    height: auto;
-  }
-  
-  
+  .banner img {width: 100%; height: auto;}
   .banner__copy h3{font-size: 8vw; color: #000; text-align: center; font-weight: 600;}
   .banner__copy p{margin-top: 8px; margin-bottom: 8px; font-size: 5.5vw;  color: black; text-align: center;}
   

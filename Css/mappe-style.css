@@ -1,6 +1,17 @@
 body{font-family: "TT Lakes Regular", sans-serif; font-size: 16px; margin: 0; background: rgb(12, 12, 12);}
 a{text-decoration: none;}
 
+
+.sfondo__tot{  
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url("../Foto/Foto main/Sfondo\ leggende 2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;}
+
 .carousel {
     margin-left: 15%;
     margin-right: 15%;

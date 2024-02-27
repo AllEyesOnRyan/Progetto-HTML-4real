@@ -56,6 +56,19 @@
     </div>
     
     <main>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function() {
+
+            $(".box").addClass("box--hide")
+            /*Open Panel*/
+            $(".hamburger").on('click', function(){
+                $(".menu-panel").toggleClass("menu-panel--open");
+            });
+
+        });
+        </script>
+
         <div class="cover1">
             <img src="../Foto/Character/Mad-Maggie-w.jpg" alt="jpg" class="wp">
             <div class="main_name">
@@ -73,12 +86,55 @@
         </div>
 
 
-        <!-- Inserimento abilità sotto la descrizione + inserimento abilità nel mediaquery a fianco della foto tagliata -->
         <div>
             <iframe class="video" width="1103" height="622" src="https://www.youtube.com/embed/dIIbltnAcHs" title="Incontra Mad Maggie | Trailer personaggio di Apex Legends" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
     </main>
+
+    <!-- Da copiare ovunque -->
+    <button id="torna-su" onclick="scrollToTop()"> <img src="../Foto/Icons/" alt=""></button>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("torna-su").style.display = "block";
+            } else {
+            document.getElementById("torna-su").style.display = "none";
+            }
+        }
+        
+        // Animazione a scorrimento
+        function scrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, c - c / 8);
+                }
+        };
+        scrollToTop();
+        }
+    
+    </script>
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="col">
+                <h4 class="normal-text tw"> Chi siamo </h4>
+                <p class="tw"> Brambilla Federico e Crespi Ryan sono due informatici di alto livello famosi per il concepimento di siti obbrobriosi. Dopo 2 ore di esperienza sul campo hanno deciso di cimentarsi nella creazione del migliore sito dedicato ad Apex Legends annientando la poca dignità restante alla nota azienda videoludica EA entertainment.  </p>
+            </div>
+            
+            <div class="col">
+                <h4 class="normal-text tw"> Brambilla Federico</h4>
+                <p  class="tw"> Email commerciale: salve.prof@come.sta.com</p>
+
+                <h4 class="normal-text tw"> Crespi Ryan </h4>
+                <p  class="tw"> Email commerciale: laprego.cimetta@unvoto.alto.com</p>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>

@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leggende</title>
+    <title>Apex Legends</title>
+
+    <!-- Aggiungere solo questo alle pagine -->
+    <link rel="shortcut icon" href="../Foto/Icons/Apex logo.png" />
 
     <!-- Sta roba serve per resettare tutte le proprietà css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="../Css/style.css">
     <link rel="stylesheet" href="../Css/style-leggende.css">
+    <!-- Stare attenti al percorso file -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +23,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
+    
     <div class="header">
         <div class="logo-menu">
-            <a href="../Principale/index.html"> <img src="../Foto/Logos/apex-white-nav-logo.svg" alt=""> </a>
+            <a href="index.html"> <img src="../Foto/Logos/apex-white-nav-logo.svg" alt=""> </a>
         </div>
         
-        <!-- .menu>li*3 -->
         <ul class="menu">
-            
             <li class="tendina"><a href=""  class="menu-text"> Informazioni <img src="../Foto/Icons/white-down-arrow.png" alt="" class="freccetta"></a>
                 <ul class="tendina-info">
                     <a href="https://www.ea.com/it-it/games/apex-legends" class="menu-subtext">Apex Legends</a>
@@ -36,9 +40,12 @@
                 </ul>
             </li>
 
-            <li> <a href=""  class="menu-text"> Modalità <img src="../Foto/Icons/white-down-arrow.png" alt="" class="freccetta"> </a> </li>
+            <li class="tendina"> <a href=""  class="menu-text"> Modalità <img src="../Foto/Icons/white-down-arrow.png" alt="" class="freccetta"> </a>
+                <ul class="tendina-info">
+                    <a href="../Pagine/battle-royale.html" class="menu-subtext">Battle Royale</a>
+                </ul>
+            </li>
             <li> <a href="" class="menu-text"> Battlepass </a> </li>
-            <li> <a href=""  class="menu-text"> Stagione </a> </li>
             <li> <a href="https://answers.ea.com/t5/Apex-Legends/ct-p/apex-legends-it?profile.language=it"  class="menu-text"> Community </a> </li>
 
         </ul>
@@ -54,21 +61,63 @@
             <span></span>
             <span></span>
         </div>
+
+        
     </div>
 
+    <div class="menu-panel">
+        <div class="menu-panel__logo">
+            <a href="index.html"> <img src="../Foto/Logos/apex-white-nav-logo.svg" alt=""> </a>
+        </div>
+        <ul>
+            <h3 class="menu-text">Informazioni</h3>
+            <div class="subtext">
+                <li class="menu-subtext"> <a href="https://www.ea.com/it-it/games/apex-legends" class="menu-subtext"> <img src="../Foto/Icons/White-dot.png" alt="">Apex Legends </a></li>
+                <li class="menu-subtext"> <a href="../Pagine/leggende.html" class="menu-subtext"> <img src="../Foto/Icons/White-dot.png" alt="">Leggende</a></li>
+                <li class="menu-subtext"> <a href="../Pagine/mappe.html" class="menu-subtext"> <img src="../Foto/Icons/White-dot.png" alt="">Mappe</a></li>
+            </div>
+
+            <h3 class="menu-text">Modalità</h3>
+            <div class="subtext">
+                <li class="menu-subtext"> <a href="../Pagine/battle-royale.html" class="menu-subtext"> <img src="../Foto/Icons/White-dot.png" alt="">Battle Royale</a></li>
+            </div>
+            
+        </ul>
+    </div>
+
+
     <main class="container">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function() {
+
+            $(".box").addClass("box--hide")
+            /*Open Panel*/
+            $(".hamburger").on('click', function(){
+                $(".menu-panel").toggleClass("menu-panel--open");
+            });
+
+        });
+        </script>
+
         <div class="cover2">
             <div class="cover2__background">
-                <img src="../Foto/Foto main/sfondo s19.jpeg" alt="">
+                <img src="../Foto/Foto main/Leggende.jpg" alt="">
                 <div class="cover2__logo">
                     <img  src="../Foto/Logos/apex-hero-medium-logo-light.svg" alt="">
                 </div>
+                
+                <div class="cover2__content">
+                    <h1 class="logo-text tw">Leggende</h1>
+                    <p class="logo-subtext">Vieni a conoscere tutte leggende del mondo Apex. Chi di loro vincerà?</p>
+                </div>
+
             </div>
         </div>
 
-        
-        
     </main>
+
+    <div class="divisorio"></div>
 
     <div class="legends-background">
         
@@ -314,8 +363,51 @@
             </a>
 
         </div>
-        <!-- <img src="Foto main/sfondo sporco.avif" alt=""> -->
     </div>
+
+    <!-- Da copiare ovunque -->
+    <button id="torna-su" onclick="scrollToTop()"> <img src="../Foto/Icons/" alt=""></button>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("torna-su").style.display = "block";
+            } else {
+            document.getElementById("torna-su").style.display = "none";
+            }
+        }
+        
+        // Animazione a scorrimento
+        function scrollToTop() {
+            const scrollToTop = () => {
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, c - c / 8);
+                }
+        };
+        scrollToTop();
+        }
+    
+    </script>
+
+    <footer class="footer">
+        <div class="grid">
+            <div class="col">
+                <h4 class="normal-text tw"> Chi siamo </h4>
+                <p class="tw"> Brambilla Federico e Crespi Ryan sono due informatici di alto livello famosi per il concepimento di siti obbrobriosi. Dopo 2 ore di esperienza sul campo hanno deciso di cimentarsi nella creazione del migliore sito dedicato ad Apex Legends annientando la poca dignità restante alla nota azienda videoludica EA entertainment.  </p>
+            </div>
+            
+            <div class="col">
+                <h4 class="normal-text tw"> Brambilla Federico</h4>
+                <p  class="tw"> Email commerciale: salve.prof@come.sta.com</p>
+
+                <h4 class="normal-text tw"> Crespi Ryan </h4>
+                <p  class="tw"> Email commerciale: laprego.cimetta@unvoto.alto.com</p>
+            </div>
+        </div>
+    </footer>
     
 </body>
 </html>
