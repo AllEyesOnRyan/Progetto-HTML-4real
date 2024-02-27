@@ -56,7 +56,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 .menu li{display: inline-block;}
 .menu li a{display: block; padding: 15px 8px; position: relative;}
 .menu a img{height: 15px;}
-/* .menu li a:hover{color: #da292a;} */
+.menu li a:hover{color: #da292a;}
 
 .hamburger{display: none;}
 
