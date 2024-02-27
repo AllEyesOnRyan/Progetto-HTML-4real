@@ -71,8 +71,7 @@ a{text-decoration: none;}
 
 .video{
     width: 70%;
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin: 0 15%;
 }
 
 .character-tagliato{
