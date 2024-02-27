@@ -221,6 +221,28 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   display: block;
 }
 
+.tito{
+  font-family: "Protest Revolution", sans-serif; 
+  font-style: italic;
+  color: #000000;
+  /* text-transform: uppercase; */
+  font-size: 7vw;
+  text-align: center;
+  margin: 110px 0 10px 0;
+} 
+.container-photo{
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  border-radius: 30px;
+}
+
+.photo{
+  height: 100%;
+  width: auto;
+  padding: 40px;
+}
+
 @media (min-width: 650px) and ( max-width: 1100px) {
   .video-class{position: relative;}
   

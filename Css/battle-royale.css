@@ -88,7 +88,7 @@
 
 .brcard__container{width: 90%;}
 
-.brcard__container img{float: left; width: 50%; height: 40%;}
+.brcard__container img{float: left; width: auto; height: 40%;}
 
 .brcard__container2{
   position: absolute;
@@ -104,3 +104,11 @@
 
 .brcard__content{padding: 20px;}
 .brcard__content h2{padding-bottom: 20px;}
+
+@media (max-width: 768px) {
+  .brcard__container2{
+    flex-direction: column;
+    left: 50%;
+  }
+  .brcard__container img{width: 100%;}
+}
