@@ -311,8 +311,8 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 
 @media (max-width: 1100px) {
   .grid {flex-wrap: wrap; width: 100%;}
-  .grid .col h4{font-size: 20px;}
-  .grid .col p{font-size: 15px;}
+  .grid .col h4{font-size: 20px; text-align: center;}
+  .grid .col p{font-size: 15px; text-align: center;}
 }
 
 

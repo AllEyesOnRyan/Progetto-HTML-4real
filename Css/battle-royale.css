@@ -18,7 +18,7 @@
 }
 
 .card-title{color: #fff; font-weight: 800; font-size: 4vw;}
-.card-text{color: #fff; font-size: 20px; padding: 10px 20px; box-sizing: border-box;}
+.card-text{color: #fff; font-size: 2vw; padding: 10px 20px; box-sizing: border-box;}
 
 
 
@@ -111,4 +111,6 @@
     left: 50%;
   }
   .brcard__container img{width: 100%;}
+  .logo-text{left: 50%; bottom: 0%;}
+  .logo-subtext{left: 50% ;bottom: 0%;}
 }
