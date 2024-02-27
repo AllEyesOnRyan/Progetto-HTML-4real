@@ -6,7 +6,7 @@ a{text-decoration: none;}
 p{line-height: 28px; color: #666; font-weight: 300;}
 
 .menu-text{font-family: "Teko", sans-serif; font-size: 25px; text-transform: uppercase; color: #fff;}
-.menu-subtext{font-family: "TT Lakes Regular", sans-serif; font-size: 16px; color: #fff; font-weight: 0;}
+.menu-subtext{font-family: "TT Lakes Regular", sans-serif; font-size: 20px; color: #fff; font-weight: 0;}
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
 .sublogo-text{font-size: 25px;}
@@ -56,7 +56,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 .menu li{display: inline-block;}
 .menu li a{display: block; padding: 15px 8px; position: relative;}
 .menu a img{height: 15px;}
-.menu li a:hover{color: #da292a;}
+/* .menu li a:hover{color: #da292a;} */
 
 .hamburger{display: none;}
 
@@ -111,7 +111,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   .menu-text{font-size: 30px; padding: 10px;}
   .subtext{padding: 0 15px;}
   .subtext li a img{width: 15px;}
-  .menu-subtext{font-size: 20px; padding: 8px 0 ;}
+  .menu-subtext{font-size: 100px; padding: 8px 0 ;}
 
 
   .hamburger{
@@ -143,7 +143,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
   position: absolute;
   padding-top: 20px;
   max-height: 0px; 
-  width: 144px;
+  width: auto;
   display: grid;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
@@ -151,7 +151,7 @@ p{line-height: 28px; color: #666; font-weight: 300;}
 }
 
 .tendina ul a{
-  padding: 10px 20px;
+  padding: 15px 20px;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
   background: linear-gradient(0deg, rgba(0,0,0,.9), rgba(0,0,0,0.9));
